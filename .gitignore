@@ -1,0 +1,10 @@
+
+/.vs/
+/UtangApi/bin/
+/UtangApi/obj/
+/UtangApi.Models/bin/
+/UtangApi.Models/obj/
+/UtangApi.Repositories/bin/
+/UtangApi.Repositories/obj/
+/UtangApi.Services/bin/
+/UtangApi.Services/obj/
