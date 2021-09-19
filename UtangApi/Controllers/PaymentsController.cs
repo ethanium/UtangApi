@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pera.UtangApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PaymentsController : ControllerBase
