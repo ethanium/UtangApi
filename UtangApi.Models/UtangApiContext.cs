@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace UtangApi.Models
+namespace Pera.UtangApi.Models
 {
     public class UtangContext : DbContext
     {
@@ -11,5 +11,6 @@ namespace UtangApi.Models
 
         public DbSet<Loan> Loans { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<Balance> Balances { get; set; }
     }
 }

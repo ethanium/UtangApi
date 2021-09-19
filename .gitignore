@@ -2,9 +2,13 @@
 /.vs/
 /UtangApi/bin/
 /UtangApi/obj/
+/UtangApi.Formulas/bin/
+/UtangApi.Formulas/obj/
 /UtangApi.Models/bin/
 /UtangApi.Models/obj/
 /UtangApi.Repositories/bin/
 /UtangApi.Repositories/obj/
 /UtangApi.Services/bin/
 /UtangApi.Services/obj/
+/UtangApi.Tests/bin/
+/UtangApi.Tests/obj/

@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Pera.UtangApi.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using UtangApi.Models;
 
-namespace UtangApi.Repositories
+namespace Pera.UtangApi.Repositories
 {
     public class PaymentRepository : IPaymentRepository
     {
@@ -15,23 +15,15 @@ namespace UtangApi.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Payment>> GetPayments()
+        public async Task<IEnumerable<Payment>> GetPayments(string accountNumber)
         {
-            return await _context.Payments.OrderByDescending(x => x.Date).ToListAsync();
-        }
-
-        public async Task<bool> PutPayment(Payment payment)
-        {
-            try
+            List<Payment> results = null;
+            IQueryable<Payment> payments = _context.Payments.Where(x => x.AccountNumber == accountNumber);
+            if (payments.Any())
             {
-                _context.Entry(payment).State = EntityState.Modified;
-                int entries = await _context.SaveChangesAsync();
-                return entries > 0;
+                results = await payments.OrderByDescending(x => x.Date).ToListAsync();
             }
-            catch
-            {
-                return false;
-            }
+            return results;
         }
     }
 }

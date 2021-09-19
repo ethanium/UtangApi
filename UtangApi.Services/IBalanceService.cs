@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace Pera.UtangApi.Services
 {
-    public interface IPaymentService
+    public interface IBalanceService
     {
-        public Task<IEnumerable<Payment>> GetPayments(string accountNumber);
+        public Task<IEnumerable<Balance>> GetBalances(string accountNumber);
     }
 }

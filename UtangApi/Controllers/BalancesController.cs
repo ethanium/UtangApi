@@ -10,24 +10,24 @@ namespace Pera.UtangApi.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class PaymentsController : ControllerBase
+    public class BalancesController : ControllerBase
     {
-        private readonly IPaymentService _service;
+        private readonly IBalanceService _service;
 
-        public PaymentsController(IPaymentService service)
+        public BalancesController(IBalanceService service)
         {
             _service = service;
         }
 
-        // GET: api/Payments
+        // GET: api/Balances
         [HttpGet]
-        public async Task<ActionResult> GetPayments(string accountNumber)
+        public async Task<ActionResult> GetBalances(string accountNumber)
         {
-            IEnumerable<Payment> payments = await _service.GetPayments(accountNumber);
-            if (payments is null)
+            IEnumerable<Balance> balances = await _service.GetBalances(accountNumber);
+            if (balances is null)
                 return NotFound();
 
-            return Ok(payments);
+            return Ok(balances);
         }
     }
 }
