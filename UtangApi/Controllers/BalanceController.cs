@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Pera.UtangApi.Models;
 using Pera.UtangApi.Services;
 using System.Collections.Generic;
-using System.Net;
 using System.Threading.Tasks;
 
 namespace Pera.UtangApi.Controllers

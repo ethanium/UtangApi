@@ -26,7 +26,7 @@ namespace Pera.UtangApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers(); 
             services.AddDbContext<UtangContext>(opt => opt.UseInMemoryDatabase("UtangDb"));
             services.AddScoped<IPaymentRepository, PaymentRepository>();
             services.AddScoped<IBalanceRepository, BalanceRepository>();

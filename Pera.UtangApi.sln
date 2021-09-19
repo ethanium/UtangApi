@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pera.UtangApi.Repositories"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pera.UtangApi.Formulas", "UtangApi.Formulas\Pera.UtangApi.Formulas.csproj", "{69C97138-8620-4979-8EB3-F7E12188A55C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pera.UtangApi.Tests", "UtangApi.Tests\Pera.UtangApi.Tests.csproj", "{0EEDD041-2DBE-4464-9FD8-A240145F72A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{69C97138-8620-4979-8EB3-F7E12188A55C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69C97138-8620-4979-8EB3-F7E12188A55C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69C97138-8620-4979-8EB3-F7E12188A55C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EEDD041-2DBE-4464-9FD8-A240145F72A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EEDD041-2DBE-4464-9FD8-A240145F72A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EEDD041-2DBE-4464-9FD8-A240145F72A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EEDD041-2DBE-4464-9FD8-A240145F72A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
