@@ -6,7 +6,6 @@ namespace Pera.UtangApi.Repositories
 {
     public interface IPaymentRepository
     {
-        public Task<IEnumerable<Payment>> GetPayments();
-        public Task<bool> PutPayment(Payment payment);
+        public Task<IEnumerable<Payment>> GetPayments(string accountNumber);
     }
 }

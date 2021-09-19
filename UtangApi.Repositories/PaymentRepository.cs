@@ -15,23 +15,12 @@ namespace Pera.UtangApi.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Payment>> GetPayments()
+        public async Task<IEnumerable<Payment>> GetPayments(string accountNumber)
         {
-            return await _context.Payments.OrderByDescending(x => x.Date).ToListAsync();
-        }
-
-        public async Task<bool> PutPayment(Payment payment)
-        {
-            try
-            {
-                _context.Entry(payment).State = EntityState.Modified;
-                int entries = await _context.SaveChangesAsync();
-                return entries > 0;
-            }
-            catch
-            {
-                return false;
-            }
+            return await _context.Payments
+                .Where(x => x.AccountNumber == accountNumber)
+                .OrderByDescending(x => x.Date)
+                .ToListAsync();
         }
     }
 }

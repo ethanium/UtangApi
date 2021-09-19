@@ -14,9 +14,9 @@ namespace Pera.UtangApi.Services
             _repository = repository;
         }
 
-        public async Task<IEnumerable<Payment>> GetPayments()
+        public async Task<IEnumerable<Payment>> GetPayments(string accountNumber)
         {
-            return await _repository.GetPayments();
+            return await _repository.GetPayments(accountNumber);
         }
     }
 }
