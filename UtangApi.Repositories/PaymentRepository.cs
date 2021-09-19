@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Pera.UtangApi.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using UtangApi.Models;
 
-namespace UtangApi.Repositories
+namespace Pera.UtangApi.Repositories
 {
     public class PaymentRepository : IPaymentRepository
     {

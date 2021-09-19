@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Pera.UtangApi.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using UtangApi.Models;
 
-namespace UtangApi.Repositories
+namespace Pera.UtangApi.Repositories
 {
     public interface IPaymentRepository
     {

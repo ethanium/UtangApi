@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtangApi", "UtangApi\UtangApi.csproj", "{3E52E3B0-9CB5-4AB3-951D-4BE9861C32B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pera.UtangApi", "UtangApi\Pera.UtangApi.csproj", "{3E52E3B0-9CB5-4AB3-951D-4BE9861C32B3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtangApi.Models", "UtangApi.Models\UtangApi.Models.csproj", "{CA525534-7B09-4E4B-8845-554561A651ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pera.UtangApi.Models", "UtangApi.Models\Pera.UtangApi.Models.csproj", "{CA525534-7B09-4E4B-8845-554561A651ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtangApi.Services", "UtangApi.Services\UtangApi.Services.csproj", "{132CAFAB-94C9-4A71-9007-320316F048E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pera.UtangApi.Services", "UtangApi.Services\Pera.UtangApi.Services.csproj", "{132CAFAB-94C9-4A71-9007-320316F048E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtangApi.Repositories", "UtangApi.Repositories\UtangApi.Repositories.csproj", "{25599FE9-96DF-48C6-964A-7FFE3A73CC27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pera.UtangApi.Repositories", "UtangApi.Repositories\Pera.UtangApi.Repositories.csproj", "{25599FE9-96DF-48C6-964A-7FFE3A73CC27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

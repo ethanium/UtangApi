@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace UtangApi.Models
+namespace Pera.UtangApi.Models
 {
     public class Transaction
     {

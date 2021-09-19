@@ -1,21 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using UtangApi.Models;
-using Microsoft.EntityFrameworkCore;
-using UtangApi.Services;
-using UtangApi.Repositories;
+using Pera.UtangApi.Models;
+using Pera.UtangApi.Repositories;
+using Pera.UtangApi.Services;
+using System;
+using System.Collections.Generic;
 
-namespace UtangApi
+namespace Pera.UtangApi
 {
     public class Startup
     {

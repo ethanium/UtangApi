@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UtangApi.Models\UtangApi.Models.csproj" />
-    <ProjectReference Include="..\UtangApi.Services\UtangApi.Services.csproj" />
+    <ProjectReference Include="..\UtangApi.Models\Pera.UtangApi.Models.csproj" />
+    <ProjectReference Include="..\UtangApi.Services\Pera.UtangApi.Services.csproj" />
   </ItemGroup>
 
 </Project>

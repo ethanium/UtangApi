@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Pera.UtangApi.Models;
+using Pera.UtangApi.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using UtangApi.Models;
-using UtangApi.Services;
 
-namespace UtangApi.Controllers
+namespace Pera.UtangApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

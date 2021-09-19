@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace UtangApi.Models
+namespace Pera.UtangApi.Models
 {
     public class UtangContext : DbContext
     {
