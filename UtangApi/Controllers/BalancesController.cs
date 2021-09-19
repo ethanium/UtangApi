@@ -10,16 +10,16 @@ namespace Pera.UtangApi.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class BalanceController : ControllerBase
+    public class BalancesController : ControllerBase
     {
         private readonly IBalanceService _service;
 
-        public BalanceController(IBalanceService service)
+        public BalancesController(IBalanceService service)
         {
             _service = service;
         }
 
-        // GET: api/Payments
+        // GET: api/Balances
         [HttpGet]
         public async Task<ActionResult> GetBalances(string accountNumber)
         {

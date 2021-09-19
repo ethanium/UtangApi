@@ -96,12 +96,12 @@ namespace Pera.UtangApi
         // This method will seed sample data to UtangDb
         private static void Seed(UtangContext context)
         {
-            int transactionId = 1;
-            int loanId = 1;
+            int transactionId = 0;
+            int loanId = 0;
 
             Loan loan = new();
-            loan.TransactionId = transactionId;
-            loan.LoanId = loanId;
+            loan.TransactionId = ++transactionId;
+            loan.LoanId = ++loanId;
             loan.AccountNumber = "000000000001";
             loan.Date = DateTime.Today.AddMonths(-13);
             loan.Amount = 20000;
@@ -115,8 +115,8 @@ namespace Pera.UtangApi
             {
                 Payment payment = new()
                 {
-                    TransactionId = transactionId++,
-                    LoanId = loanId,
+                    TransactionId = ++transactionId,
+                    LoanId = loan.LoanId,
                     AccountNumber = "000000000001",
                     Date = DateTime.Today.AddMonths(month - 12),
                     Amount = 1000,
@@ -125,6 +125,18 @@ namespace Pera.UtangApi
                 payments.Add(payment);
             }
             context.Payments.AddRange(payments);
+
+            loan = new();
+            loan.TransactionId = ++transactionId;
+            loan.LoanId = ++loanId;
+            loan.AccountNumber = "000000000002";
+            loan.Date = DateTime.Today.AddYears(-2);
+            loan.Amount = 20000;
+            loan.Year = 2;
+            loan.InterestRate = 0.08M;
+            loan.ClosedReason = "";
+            context.Loans.Add(loan);
+
             context.SaveChanges();
         }
     }

@@ -31,8 +31,8 @@ namespace Pera.UtangApi.Handlers
             string username;
             try
             {
-                var authHeader = AuthenticationHeaderValue.Parse(Request.Headers["Authorization"]);
-                var credentials = Encoding.UTF8.GetString(Convert.FromBase64String(authHeader.Parameter)).Split(':');
+                AuthenticationHeaderValue authHeader = AuthenticationHeaderValue.Parse(Request.Headers["Authorization"]);
+                string[] credentials = Encoding.UTF8.GetString(Convert.FromBase64String(authHeader.Parameter)).Split(':');
                 username = credentials.FirstOrDefault();
                 var password = credentials.LastOrDefault();
 
@@ -44,10 +44,10 @@ namespace Pera.UtangApi.Handlers
                 return AuthenticateResult.Fail($"Authentication failed: {ex.Message}");
             }
 
-            var claims = new[] { new Claim(ClaimTypes.Name, username) };
-            var identity = new ClaimsIdentity(claims, Scheme.Name);
-            var principal = new ClaimsPrincipal(identity);
-            var ticket = new AuthenticationTicket(principal, Scheme.Name);
+            Claim[] claims = new[] { new Claim(ClaimTypes.Name, username) };
+            ClaimsIdentity identity = new ClaimsIdentity(claims, Scheme.Name);
+            ClaimsPrincipal principal = new ClaimsPrincipal(identity);
+            AuthenticationTicket ticket = new AuthenticationTicket(principal, Scheme.Name);
 
             return AuthenticateResult.Success(ticket);
         }

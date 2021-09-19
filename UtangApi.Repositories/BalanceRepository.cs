@@ -43,9 +43,13 @@ namespace Pera.UtangApi.Repositories
                     return new Balance()
                     {
                         LoanId = l.LoanId,
+                        Year = l.Year,
+                        InterestRate = l.InterestRate,
+                        ClosedReason = l.ClosedReason,
                         AccountNumber = accountNumber,
                         Date = DateTime.Now,
-                        Amount = totalAmount - paidAmount
+                        Amount = totalAmount - paidAmount,
+                        Status = l.Status
                     };
                 }).ToList();
 
@@ -58,9 +62,7 @@ namespace Pera.UtangApi.Repositories
                 balance.AccountNumber = accountNumber;
                 balance.Date = DateTime.Now;
                 _context.Add(balance);
-            }
-
-            await _context.SaveChangesAsync();
+            } 
 
             return balances;
         }

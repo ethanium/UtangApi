@@ -19,6 +19,7 @@ namespace Pera.UtangApi.Controllers
             _service = service;
         }
 
+        // GET: api/Payments
         [HttpGet]
         public async Task<ActionResult> GetPayments(string accountNumber)
         {
