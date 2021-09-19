@@ -11,5 +11,6 @@ namespace Pera.UtangApi.Models
 
         public DbSet<Loan> Loans { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<Balance> Balances { get; set; }
     }
 }

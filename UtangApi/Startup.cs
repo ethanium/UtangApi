@@ -29,7 +29,9 @@ namespace Pera.UtangApi
             services.AddControllers();
             services.AddDbContext<UtangContext>(opt => opt.UseInMemoryDatabase("UtangDb"));
             services.AddScoped<IPaymentRepository, PaymentRepository>();
+            services.AddScoped<IBalanceRepository, BalanceRepository>();
             services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<IBalanceService, BalanceService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "UtangApi", Version = "v1" });
@@ -63,14 +65,29 @@ namespace Pera.UtangApi
         // This method will seed sample data to UtangDb
         private static void Seed(UtangContext context)
         {
+            int transactionId = 1;
+            int loanId = 1;
+
+            Loan loan = new();
+            loan.TransactionId = transactionId;
+            loan.LoanId = loanId;
+            loan.AccountNumber = "000000000001";
+            loan.Date = DateTime.Today.AddMonths(-13);
+            loan.Amount = 20000;
+            loan.Year = 2;
+            loan.InterestRate = 0.08M;
+            loan.ClosedReason = "";
+            context.Loans.Add(loan);
+
             List<Payment> payments = new();
-            for (int i = 1; i < 12; i++)
+            for (int month = 0; month < 12; month++)
             {
                 Payment payment = new()
                 {
-                    Id = i,
+                    TransactionId = transactionId++,
+                    LoanId = loanId,
                     AccountNumber = "000000000001",
-                    Date = DateTime.Today.AddMonths(i - 12),
+                    Date = DateTime.Today.AddMonths(month - 12),
                     Amount = 1000,
                     Status = ""
                 };

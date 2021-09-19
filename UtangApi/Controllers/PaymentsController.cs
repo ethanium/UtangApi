@@ -17,11 +17,14 @@ namespace Pera.UtangApi.Controllers
             _service = service;
         }
 
-        // GET: api/Payments
         [HttpGet]
-        public async Task<IEnumerable<Payment>> GetPayments(string accountNumber)
+        public async Task<ActionResult> GetPayments(string accountNumber)
         {
-            return await _service.GetPayments(accountNumber);
+            IEnumerable<Payment> payments = await _service.GetPayments(accountNumber);
+            if (payments is null)
+                return NotFound();
+
+            return Ok(payments);
         }
     }
 }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Pera.UtangApi.Repositories
+namespace Pera.UtangApi.Services
 {
-    public interface IBalanceRepository
+    public interface IBalanceService
     {
         public Task<IEnumerable<Balance>> GetBalances(string accountNumber);
     }

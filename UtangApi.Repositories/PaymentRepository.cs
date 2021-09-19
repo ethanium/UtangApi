@@ -17,10 +17,13 @@ namespace Pera.UtangApi.Repositories
 
         public async Task<IEnumerable<Payment>> GetPayments(string accountNumber)
         {
-            return await _context.Payments
-                .Where(x => x.AccountNumber == accountNumber)
-                .OrderByDescending(x => x.Date)
-                .ToListAsync();
+            List<Payment> results = null;
+            IQueryable<Payment> payments = _context.Payments.Where(x => x.AccountNumber == accountNumber);
+            if (payments.Any())
+            {
+                results = await payments.OrderByDescending(x => x.Date).ToListAsync();
+            }
+            return results;
         }
     }
 }

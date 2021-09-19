@@ -2,5 +2,6 @@
 {
     public class Balance : Transaction
     {
+        public long LoanId { get; set; }
     }
 }

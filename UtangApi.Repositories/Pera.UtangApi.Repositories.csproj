@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\UtangApi.Formulas\Pera.UtangApi.Formulas.csproj" />
     <ProjectReference Include="..\UtangApi.Models\Pera.UtangApi.Models.csproj" />
   </ItemGroup>
 
