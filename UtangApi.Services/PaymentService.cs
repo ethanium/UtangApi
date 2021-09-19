@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Pera.UtangApi.Models;
+using Pera.UtangApi.Repositories;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using UtangApi.Models;
-using UtangApi.Repositories;
 
-namespace UtangApi.Services
+namespace Pera.UtangApi.Services
 {
     public class PaymentService : IPaymentService
     {
@@ -14,9 +14,9 @@ namespace UtangApi.Services
             _repository = repository;
         }
 
-        public async Task<IEnumerable<Payment>> GetPayments()
+        public async Task<IEnumerable<Payment>> GetPayments(string accountNumber)
         {
-            return await _repository.GetPayments();
+            return await _repository.GetPayments(accountNumber);
         }
     }
 }
